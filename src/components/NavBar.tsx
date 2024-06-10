@@ -1,0 +1,13 @@
+import Link  from "next/link"
+function NavBar() {
+  return (
+    <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-6">
+      <Link className="flex items-center gap-3" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" width="27"><rect id="r4" width="500" height="500" x="0" y="0" fill="url(#r5)" stroke="#FFF" strokeOpacity="100%" strokeWidth="0" paintOrder="stroke" rx="128"></rect><clipPath><use ></use></clipPath><defs><linearGradient id="r5" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse" className="-webkit-transform-origin:center center;transform-origin:center center"><stop stopColor="#1F1F1F"></stop><stop offset="1"></stop></linearGradient><radialGradient cx="0" cy="0" r="1" gradientTransform="matrix(0 512 -512 0 256 0)" gradientUnits="userSpaceOnUse"><stop stopColor="#fff"></stop><stop offset="1" stopColor="#fff" stopOpacity="0"></stop></radialGradient></defs><svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" x="96" y="96" alignmentBaseline="middle" color="#C7C7C7" viewBox="0 0 16 16"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.25 7.75L2.539 9.654a2.692 2.692 0 103.807 3.807L8.25 11.75m3.5-3.5l1.711-1.904A2.692 2.692 0 109.654 2.54L7.75 4.25m-1 5l2.5-2.5"></path></svg></svg>
+        <span className="text-xl font-medium">Url short</span>
+      </Link>
+    </nav>
+  )
+}
+
+export default NavBar
