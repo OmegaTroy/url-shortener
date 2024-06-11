@@ -1,14 +1,7 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-
-  body{
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    background: #101010;
-    color: #fafafa;
-  }
-
-
+  
   @layer base {
     :root {
       --background: 0 0% 100%;

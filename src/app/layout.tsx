@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import { montserrat } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=''>
+    <body className={`${montserrat.className} h-screen antialiased bg-color2 text-light`}>
         <NavBar />
-        {children}</body>
+        {children}
+        </body>
     </html>
   );
 }

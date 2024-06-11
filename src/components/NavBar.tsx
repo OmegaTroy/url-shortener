@@ -4,25 +4,32 @@ import GitHub from "./icons/GitHub";
 
 
 const links = [
-  {title:"Git", href:"/git", icon: <GitHub/>},
+  {title:"Git", href:"https://github.com/OmegaTroy/url-shortener", icon: <GitHub/>},
   {title:"Dashboard", href:"/dashboard"},
   {title:"Get Started", href:"/get-started"},
 ]
-
+ 
 function NavBar() {
   return (
-    <nav className="flex items-center justify-between bg-gray-900 p-6">
+    <nav className="flex items-center justify-between bg-color2 p-6">
       <Link className="flex items-center gap-3" href="/">
         <Logo/>
-        <span className="text-xl font-semibold">Url short</span>
+        <span className="text-xl font-semibold text-light">Url short</span>
       </Link>
       <ul  className="flex gap-3 items-center">
       {
         links.map((link) => (
         <li key={link.title}>
-          <a className='text-lg font-medium hover:text-blue-500' href={link.href}>
+          {
+            link.title == 'Git' ? (
+              <Link target="_blank" rel="noreferrer" className='text-lg font-semibold hover:text-blue-500' href={link.href}>
+              {link.icon || link.title}
+            </Link>
+            ) : (
+            <Link className='text-lg font-semibold hover:text-blue-500' href={link.href}>
             {link.icon || link.title}
-          </a>
+          </Link>
+        )}
         </li>
       ))
       }
