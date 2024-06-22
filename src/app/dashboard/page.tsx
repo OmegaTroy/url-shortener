@@ -1,4 +1,5 @@
 import { getServerSession } from "next-auth/next"
+import SingOut from "@/components/SingOut"
 
 async function DashboardPage() {
   const session = await getServerSession()
@@ -6,7 +7,7 @@ async function DashboardPage() {
   const user = session?.user
 
   return (
-    <div>
+    <div className="pt-14 px-10">
       <h1 className="text-3xl font-bold ">Dashboard</h1>
       <p className="text-2xl text-teal-400">{user?.name}</p>
       <span>{user?.email}</span>

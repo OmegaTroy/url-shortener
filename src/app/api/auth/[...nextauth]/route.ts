@@ -9,6 +9,10 @@ const handler = NextAuth({
       clientSecret: GITHUB_CLIENT_SECRET,
     }),
   ],
+  pages:{
+    signIn: '/auth',
+    signOut: '/',
+  }
 })
 
 export { handler as GET, handler as POST }

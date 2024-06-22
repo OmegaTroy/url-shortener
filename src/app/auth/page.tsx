@@ -1,4 +1,6 @@
+'use client'
 import { Card,CardContent,CardDescription,CardTitle,CardHeader } from "../../components/ui/card";
+import { signIn } from "next-auth/react";
 
 function page() {
   return (
@@ -16,7 +18,10 @@ function page() {
       <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Log in with Google
       </button>
-      <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button onClick={ async () => {
+        const result = await signIn("github", { callbackUrl: "/dashboard" })
+        console.log(result)
+        }} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         log in with Github
       </button>
     </CardContent>
